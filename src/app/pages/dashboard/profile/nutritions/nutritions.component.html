@@ -1,0 +1,64 @@
+<nb-card *ngIf="profileData">
+ 
+  <nb-card-body>
+    <div class="nutritions">
+      <div class="nut-left">
+        <div class="protein nut-progress">
+          <nb-progress-bar [value]="48" status="info">{{ protein(profileData.bmr, 48) }}g</nb-progress-bar>
+          <div class="nut-progress-info">
+            <span>Protein:
+              {{ protein(profileData.bmr, 100) - protein(profileData.bmr, 48) }}g left
+            </span>
+            <span>
+              {{ protein(profileData.bmr, 100) }}g
+            </span>
+        </div>
+      </div>
+        <div class="carb nut-progress">
+          <nb-progress-bar [value]="50" status="success">{{ carb(profileData.bmr, 50)}}g</nb-progress-bar>
+          <div class="nut-progress-info">
+            <span>Carb:
+              {{ carb(profileData.bmr, 100) - carb(profileData.bmr, 50) }}g left
+            </span>
+            <span>
+              {{ carb(profileData.bmr, 100) }}g
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nut-right">
+        <div class="fat nut-progress">
+          <nb-progress-bar [value]="30" status="danger">{{fat(profileData.bmr, 30)}}g</nb-progress-bar>
+
+          <div class="nut-progress-info">
+            <span>Fat:
+              {{ fat(profileData.bmr, 100) - carb(profileData.bmr, 30) }}g left
+            </span>
+            <span>
+              {{ fat(profileData.bmr, 100) }}g
+          </span>
+          </div>
+        </div>
+
+        <div class="callories nut-progress">
+          <nb-progress-bar [value]="value" status="warning">
+            {{ccal(profileData.bmr, value)}}ccal
+          </nb-progress-bar>
+
+          <div class="nut-progress-info">
+          <span>
+            Ccal:
+            {{ccal(profileData.bmr, 100) - ccal(profileData.bmr, value)}} left
+          </span>
+          <span>
+            {{ccal(profileData.bmr, 100)}}ccal
+          </span>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+<app-meals [mealsData]="profileData?.meals"></app-meals>

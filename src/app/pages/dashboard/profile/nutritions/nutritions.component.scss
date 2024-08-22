@@ -1,0 +1,35 @@
+.nutritions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+
+    .nut-left  {
+        width: 100%;
+        padding-right: .8em;
+
+    }
+
+    .nut-right {
+        width: 100%;
+        padding-left: .8em;
+    }
+
+    .nut-progress {
+        margin: .8em 0 0 0;
+
+        .nut-progress-info {
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            // margin-top: .3em;
+
+        span {
+            // display: block;
+            // margin-top: .8em;
+        }
+        }
+
+    }
+
+}

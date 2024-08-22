@@ -1,0 +1,71 @@
+.foods-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .food-title {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .food-time {
+    font-size: 1.2em;
+  }
+
+  .food-nutritions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: 1.2em;
+      margin-right: 1.2em;
+      padding-right: 1.2em;
+      border-right: 1px solid #ffd6d9;
+    }
+  }
+
+  .food-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    nb-icon {
+      font-size: 1.7em;
+      margin-left: 1.5em;
+      cursor: pointer;
+    }
+    .food-weight {
+      font-size: 1.2em;
+    }
+  }
+
+  .prot-color {
+    display: inline-block;
+    color: var(--color-info-default);;
+  }
+
+  .fat-color {
+    display: inline-block;
+    color: var(--color-danger-default);
+  }
+
+  .carb-color {
+    display: inline-block;
+    color: var(--color-success-default);
+  }
+
+  .ccal-color {
+    display: inline-block;
+    color: var(--color-warning-default);
+  }
+
+  .gram-color {
+    display: inline-block;
+    color: var(--color-primary-default);
+  }
+
+
+}

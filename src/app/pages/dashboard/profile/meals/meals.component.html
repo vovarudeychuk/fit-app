@@ -1,0 +1,27 @@
+<nb-card *ngFor="let meal of mealsData">
+  <nb-card-header>
+    <div class="foods-flex">
+      <div class="food-title">{{meal.name}}</div>
+      <div class="food-time">10:50</div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="foods-flex">
+      <div class="food-nutritions">
+        <span>Protein: <div class="prot-color">{{meal.protein}}</div>g</span>
+        <span>Fat: <div class="fat-color">{{meal.fat}}</div>g</span>
+        <span>Carb: <div class="carb-color">{{meal.carb}}</div>g</span>
+      </div>
+      <div class="food-actions">
+        <div class="food-weight">
+          <div class="ccal-color">{{meal.ccal}}</div>
+          ccal /
+          <div class="gram-color">450</div>
+          g
+        </div>
+        <nb-icon status="success" icon="edit-outline"></nb-icon>
+        <nb-icon status="warning" icon="trash-2-outline"></nb-icon>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
